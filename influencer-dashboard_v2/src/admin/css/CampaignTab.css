@@ -1,0 +1,359 @@
+/* ==== Page Container ==== */
+.campaign-tab-container {
+    padding: 10px 30px 30px 30px;
+  background: #f4f6f8;
+  min-height: 100vh;  
+  margin: 30px 30px 30px 300px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); ;
+}
+
+/* ==== Header ==== */
+.campaign-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  margin-top: -120px;
+}
+
+.campaign-header h2 {
+  color: #2c3e50;
+  font-size: 28px;
+  font-weight: 800;
+  border-bottom: 3px solid #3498db;
+  margin-bottom: 10px;
+  display: inline-block;
+  align-self: flex-start;
+}
+
+.campaign-header p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+/* ==== Toolbar ==== */
+.campaign-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ==== Inputs ==== */
+.campaign-search,
+.campaign-filter {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  min-width: 220px;
+}
+
+.campaign-filter {
+  min-width: 180px;
+}
+
+.campaign-search:focus,
+.campaign-filter:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 4px rgba(52, 152, 219, 0.4);
+}
+
+/* ==== Buttons ==== */
+.btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s ease;
+  min-width: 150px;
+  text-align: center;
+}
+
+.add-btn {
+  background: #28a745;
+  color: #fff;
+}
+
+.edit-btn {
+  background: #3498db;
+  color: #fff;
+}
+
+.delete-btn {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ==== Table ==== */
+.campaign-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.campaign-table th,
+.campaign-table td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.campaign-table th {
+  background: #f8fafc;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 15px;
+}
+
+.campaign-table tr:hover {
+  background: #f0f7ff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: 0.2s ease;
+}
+
+.campaign-table td {
+  font-size: 14px;
+  color: #333;
+}
+
+/* ==== Checkbox ==== */
+.campaign-table input[type="checkbox"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* ==== Status Badge ==== */
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+.status-badge.upcoming {
+  background-color: #dbd400;
+}
+
+.status-badge.ongoing {
+  background-color: #fca800;
+}
+
+.status-badge.completed {
+  background-color: #06be3a;
+}
+
+.status-badge.paused {
+  background-color: #e74c3c;
+}
+
+.clickable {
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.clickable:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background: #bcb8f5;
+  color: black;
+  font-weight: 700;
+  border-radius: 6px;
+  z-index: 2;
+  position: relative;
+}
+
+
+
+/* ===== MODAL OVERLAY ===== */
+.campaign-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* ===== MODAL CONTENT ===== */
+.campaign-modal-content {
+  position: relative; /* Important for absolute close button */
+  background: #fff;
+  width: 550px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 30px 35px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ===== FORM STYLING ===== */
+.campaign-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.campaign-form label {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 3px;
+}
+
+.campaign-form input,
+.campaign-form select,
+.campaign-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #dcdfe3;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.campaign-form input:focus,
+.campaign-form select:focus,
+.campaign-form textarea:focus {
+  border-color: #3498db;
+}
+
+/* Side-by-side date fields */
+.campaign-date-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.campaign-date-row div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.save-btn {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.save-btn:hover {
+  background-color: #0bac2e;
+}
+
+.cancel-btn {
+  background-color: #ccc;
+  color: #333;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.cancel-btn:hover {
+  background-color: #ff0000;
+  color: #fff;
+}
+
+
+
+
+/* ===== MODAL HEADER ===== */
+.modal-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.modal-header h3 {
+  color: #2c3e50;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Close button styling */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 14px;
+  background: transparent;
+  border: none;
+  font-size: 40px;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #e74c3c;
+  transform: scale(1.1);
+}

@@ -1,0 +1,197 @@
+/* influencer-dashboard_v2/src/admin/css/PaymentTab.css */
+
+.payment-tab-container {
+  padding: 0px 30px 30px 30px;
+  background: #f4f6f8;
+  min-height: 100vh;
+  margin: 30px 30px 30px 300px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: "Inter", sans-serif;
+}
+
+.payment-tab-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-top: -110px;
+}
+
+.payment-tab-header h2{
+
+  color: #2c3e50;
+  font-size: 28px;
+  font-weight: 800;
+  border-bottom: 3px solid #3498db;
+
+}
+
+
+/* Calculator Card */
+.calculator {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 14px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.calculator:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.calculator label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.calculator input,
+.calculator select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.calculator input:focus,
+.calculator select:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+.readonly {
+  background: #f1f3f5;
+  cursor: not-allowed;
+}
+
+/* Buttons Container */
+.calculator-buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.calculator-buttons button {
+  padding: 6px 14px;
+  min-width: 100px;
+  height: 34px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-buttons button:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+/* Button Variants */
+.calculator-buttons button:nth-child(1) {
+  background: #eca50d; /* Calculate */
+}
+
+.calculator-buttons .save-btn {
+  background: #007bff;
+}
+
+.calculator-buttons .cancel-btn {
+  background: #6c757d;
+}
+
+/* Hover Effects */
+.calculator-buttons button:nth-child(1):hover {
+  background: #138496; /* Darker cyan for Calculate */
+}
+
+.calculator-buttons .save-btn:hover {
+  background: #28a745; /* Green on hover */
+}
+
+.calculator-buttons .cancel-btn:hover {
+  background: #dc3545; /* Red on hover */
+  color: #fff;
+}
+
+.calculator-result {
+  margin-top: 20px;
+  font-weight: 600;
+  background: #f9fafb;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+}
+
+.calculator-result p {
+  margin: 6px 0;
+  color: #2c3e50;
+}
+
+/* Payment History Table Section */
+.payment-history-section {
+  margin-top: 40px;
+}
+
+.payment-history-section h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2c3e50;
+  border-left: 5px solid #007bff;
+  padding-left: 12px;
+  margin-bottom: 18px;
+}
+
+/* Table */
+.payment-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.payment-table th,
+.payment-table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 15px;
+}
+
+.payment-table th {
+  background: #eef1f6;
+  font-weight: 700;
+  font-size: 15px;
+  color: #2c3e50;
+}
+
+.payment-table tr:hover {
+  background: #f9fafb;
+}
+
+/* Empty state */
+.payment-table td[colspan] {
+  text-align: center;
+  padding: 25px 0;
+  color: #6b7280;
+  font-style: italic;
+}

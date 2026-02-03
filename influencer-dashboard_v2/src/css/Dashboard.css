@@ -1,0 +1,39 @@
+/* influencer-dashboard_v2/src/components/Dashboard.css */
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f4f6f8;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 40px;
+  background: #fff;
+}
+
+.profile-card {
+  background: #f7f8fa;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  text-align: left;
+  margin-top: 18px;
+}
+
+.profile-card h2 {
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.profile-card p {
+  color: #444;
+  margin: 6px 0;
+}
+
+.loader, .error, .empty, .coming-soon {
+  margin-top: 50px;
+  text-align: center;
+  color: #333;
+  font-size: 1.1rem;
+}

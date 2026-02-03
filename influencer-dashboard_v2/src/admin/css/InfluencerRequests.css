@@ -1,0 +1,169 @@
+/* influencer-dashboard_v2/src/admin/css/InfluencerRequests.css */
+
+.requests-table-container {
+  max-width: 1400px;
+  min-height: 100vh;
+  padding: 30px 30px 30px 30px;
+  margin: 30px 30px 30px 300px;
+  background: #f4f6f8;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.requests-table-container h2 {
+  color: #2c3e50;
+  font-size: 28px;
+  font-weight: 800;
+  border-bottom: 3px solid #3498db;
+  display: inline-block;
+}
+
+.requests-table {
+  width: 100%;
+  background: white;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.requests-table th,
+.requests-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  font-size: 14px;
+  color: #4a5568;
+  border: 1px solid #ddd;
+}
+
+.requests-table th {
+  background: #c2c8d4;
+  color: #1e2f41;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: none;
+}
+
+.requests-table tr:hover {
+  background: #f9fafb;
+}
+
+/* Buttons identical to BrandTab */
+.approve-btn,
+.reject-btn {
+  border: none;
+  padding: 6px 10px;
+  margin-right: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  font-size: 13px;
+}
+
+.approve-btn {
+  background: #28a745;
+}
+
+.reject-btn {
+  background: #dc3545;
+}
+
+.approve-btn:hover {
+  background: #218838;
+}
+
+.reject-btn:hover {
+  background: #b82b3b;
+}
+
+/* Loader (keep yours or this cleaner version) */
+.loader {
+  text-align: center;
+  padding: 40px;
+  color: #3498db;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.loader:after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 3px solid #3498db;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.request-filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.request-filters-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: 30px;
+}
+
+.request-filters-left label {
+  font-size: 16px;
+  color: #555;
+  font-weight: 800;
+}
+
+.filter-input {
+  padding: 8px 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  min-width: 220px;
+  transition: 0.2s;
+}
+
+.filter-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.15);
+}
+
+
+.request-filters-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+
+.filter-date {
+  padding: 8px 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+}
+
+.filter-date:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.15);
+}
+
+.request-filters-right label {
+  font-size: 16px;
+  color: #555;
+  font-weight: 800;
+}
